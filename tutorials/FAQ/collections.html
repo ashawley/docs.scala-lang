@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How are the collections structured? Which one should I choose? | Scala Documentation</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/resources/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="/resources/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#15a9ce">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom stylesheet -->
+    <link href="/resources/css/unslider-dots.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/unslider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/resources/css/highlightjs.css" type="text/css" />
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/resources/css/monospace.css" type="text/css" />
+
+    <!-- Atom feeds -->
+    <link rel="alternate" type="application/atom+xml" title="News Feed" href="http://scala-lang.org/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Blog Feed" href="http://scala-lang.org/feed/blog.xml" />
+
+    <!-- Algolia stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+
+  </head>
+  <body>
+
+
+<div class="navigation-fade-screen"></div>
+
+<header id="site-header">
+  <div class="wrap">
+    <nav class="navigation" role="menu">
+      <a href="http://scala-lang.org" class="navigation-bdand">
+        <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt="">
+      </a>
+      <div class="navigation-panel-button">
+        <i class="fa fa-bars"></i>
+      </div>
+      <ul class="navigation-menu">
+        
+            <li class="navigation-menu-item">
+              <a href="/" class="active">Documentation</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/download/" >Download</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/community/" >Community</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://index.scala-lang.org" >Libraries</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/contribute/" >Contribute</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/blog/" >Blog</a>
+            </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<header id="doc-header">
+  <div class="wrap" style="padding: 0px;">
+    <nav class="doc-navigation" role="menu">
+      <a href="/" class="navigation-bdand">
+        <img src="/resources/img/documentation-logo@2x.png" alt="">
+      </a>
+      <div class="navigation-ellipsis">
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+      <ul class="navigation-menu">
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="api" >API</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="https://www.scala-lang.org/api/current/">Current</a>
+                  </li>
+                
+                  <li>
+                    <a href="https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/">Nightly</a>
+                  </li>
+                
+                  <li>
+                    <a href="/api/all.html">All Versions</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="learn" >Learn</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="/getting-started.html">Getting Started</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tour/tour-of-scala.html">Tour of Scala</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tutorials/scala-for-java-programmers.html">Scala for Java Programmers</a>
+                  </li>
+                
+                  <li>
+                    <a href="/learn.html">Online Resources</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="reference" >Reference</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="/overviews/index.html">Guides & Overviews</a>
+                  </li>
+                
+                  <li>
+                    <a href="/books.html">Books</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tutorials/FAQ/index.html">Scala FAQs</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://scala-lang.org/files/archive/spec/2.12/">Language Spec</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/style/index.html" id="style guide" >Style Guide</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/cheatsheets/index.html" id="cheatsheet" >Cheatsheet</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/glossary/index.html" id="glossary" >Glossary</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/sips/index.html" id="sips" >SIPs</a>
+                
+            </li>
+        
+      </ul>
+    </nav>
+    <nav class="doc-navigation-submenus">
+      
+        
+          <ul class="navigation-submenu" id="api" style="display: none;">
+            
+              <li>
+                <a href="https://www.scala-lang.org/api/current/">Current</a>
+              </li>
+            
+              <li>
+                <a href="https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/">Nightly</a>
+              </li>
+            
+              <li>
+                <a href="/api/all.html">All Versions</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+          <ul class="navigation-submenu" id="learn" style="display: none;">
+            
+              <li>
+                <a href="/getting-started.html">Getting Started</a>
+              </li>
+            
+              <li>
+                <a href="/tour/tour-of-scala.html">Tour of Scala</a>
+              </li>
+            
+              <li>
+                <a href="/tutorials/scala-for-java-programmers.html">Scala for Java Programmers</a>
+              </li>
+            
+              <li>
+                <a href="/learn.html">Online Resources</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+          <ul class="navigation-submenu" id="reference" style="display: none;">
+            
+              <li>
+                <a href="/overviews/index.html">Guides & Overviews</a>
+              </li>
+            
+              <li>
+                <a href="/books.html">Books</a>
+              </li>
+            
+              <li>
+                <a href="/tutorials/FAQ/index.html">Scala FAQs</a>
+              </li>
+            
+              <li>
+                <a href="http://scala-lang.org/files/archive/spec/2.12/">Language Spec</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <ul class="navigation-submenu ellipsis-menu" style="display: none;">
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="/style/index.html">Style Guide</a></li>
+          
+        
+          
+            <li><a href="/cheatsheets/index.html">Cheatsheet</a></li>
+          
+        
+          
+            <li><a href="/glossary/index.html">Glossary</a></li>
+          
+        
+          
+            <li><a href="/sips/index.html">SIPs</a></li>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="inner-main">
+
+  <!-- Title -->
+  <section class="title-page">
+    <div class="wrap">
+      <div class="content-title-documentation">
+        <div class="titles">
+          
+            <div class="supertitle">FAQ</div>
+          
+          <h1>How are the collections structured? Which one should I choose?</h1>
+        </div>
+        <div class="language-dropdown">
+          <div id="dd" class="wrapper-dropdown" tabindex="1">
+            <span>Language</span>
+              <ul class="dropdown"></ul>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="content">
+	<div class="wrap">
+		<div class="content-primary documentation">
+			<div class="inner-box">
+				<div class="toc-context">
+					<h2 id="foreword">Foreword</h2>
+
+<p>There’s a <a href="http://docs.scala-lang.org/overviews/collections/introduction.html">2.8 collection walk-through</a> by Martin Odersky which should
+probably be your first reference. It has been supplemented as well with
+<a href="http://docs.scala-lang.org/overviews/core/architecture-of-scala-collections.html">architectural notes</a>, which will be of particular interest to those who
+want to design their own collections.</p>
+
+<p>The rest of this answer was written way before any such thing existed (in fact,
+before 2.8.0 itself was released).</p>
+
+<p>You can find a paper about it as <a href="http://www.scala-lang.org/sid/3">Scala SID #3</a>. Other papers in that area
+should be interesting as well to people interested in the differences between
+Scala 2.7 and 2.8.</p>
+
+<p>I’ll quote from the paper, selectively, and complement with some thoughts of
+mine. There are also some images, generated by Matthias at decodified.com, and
+the original SVG files can be found <a href="https://github.com/sirthias/scala-collections-charts/downloads">here</a>.</p>
+
+<h2 id="the-collection-classestraits-themselves">The collection classes/traits themselves</h2>
+
+<p>There are actually three hierarchies of traits for the collections: one for
+mutable collections, one for immutable collections, and one which doesn’t make
+any assumptions about the collections.</p>
+
+<p>There’s also a distinction between parallel, serial and maybe-parallel
+collections, which was introduced with Scala 2.9. I’ll talk about them in the
+next section. The hierarchy described in this section refers <em>exclusively to
+non-parallel collections</em>.</p>
+
+<p>The following image shows the non-specific hierarchy as of Scala 2.10:</p>
+
+<p><a href="/resources/images/tour/collections-diagram.svg"><img src="/resources/images/tour/collections-diagram.svg" alt="General collection hierarchy" /></a></p>
+
+<p>All elements shown are traits. In the other two hierarchies there are also
+classes directly inheriting the traits as well as classes which can be <em>viewed
+as</em> belonging in that hierarchy through implicit conversion to wrapper classes.
+The legend for these graphs can be found after them.</p>
+
+<p>Graph for immutable hierarchy:</p>
+
+<p><a href="/resources/images/tour/collections-immutable-diagram.svg"><img src="/resources/images/tour/collections-immutable-diagram.svg" alt="Immutable collection hierarchy" /></a></p>
+
+<p>Graph for mutable hierarchy:</p>
+
+<p><a href="/resources/images/tour/collections-mutable-diagram.svg"><img src="/resources/images/tour/collections-mutable-diagram.svg" alt="Mutable collection hierarchy" /></a></p>
+
+<p>Legend:</p>
+
+<p><a href="/resources/images/tour/collections-legend-diagram.svg"><img src="/resources/images/tour/collections-legend-diagram.svg" alt="Graph legend" /></a></p>
+
+<p>Here’s an abbreviated ASCII depiction of the collection hierarchy, for those who can’t see the images.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    Traversable
+                         |
+                         |
+                      Iterable
+                         |
+      +------------------+--------------------+
+     Map                Set                  Seq
+      |                  |                    |
+      |                  |             +------+-------+
+  SortedMap          SortedSet      Buffer Vector LinearSeq
+                         |
+                         |
+                      BitSet
+</code></pre></div></div>
+
+<h2 id="parallel-collections">Parallel Collections</h2>
+
+<p>When Scala 2.9 introduced parallel collections, one of the design goals was to
+make their use as seamless as possible. In the simplest terms, one can replace
+a non-parallel (serial) collection with a parallel one, and instantly reap the
+benefits.</p>
+
+<p>However, since all collections until then were serial, many algorithms using
+them assumed and depended on the fact that they <em>were</em> serial. Parallel
+collections fed to the methods with such assumptions would fail. For this
+reason, all the hierarchy described in the previous section <em>mandates serial
+processing</em>.</p>
+
+<p>Two new hierarchies were created to support the parallel collections.</p>
+
+<p>The parallel collections hierarchy has the same names for traits, but preceded
+with <code class="highlighter-rouge">Par</code>: <code class="highlighter-rouge">ParIterable</code>, <code class="highlighter-rouge">ParSeq</code>, <code class="highlighter-rouge">ParMap</code> and <code class="highlighter-rouge">ParSet</code>. Note that there is
+no <code class="highlighter-rouge">ParTraversable</code>, since any collection supporting parallel access is capable
+of supporting the stronger <code class="highlighter-rouge">ParIterable</code> trait. It doesn’t have some of the
+more specialized traits present in the serial hierarchy either. This whole
+hierarchy is found under the directory <code class="highlighter-rouge">scala.collection.parallel</code>.</p>
+
+<p>The classes implementing parallel collections also differ, with <code class="highlighter-rouge">ParHashMap</code>
+and <code class="highlighter-rouge">ParHashSet</code> for both mutable and immutable parallel collections, plus
+<code class="highlighter-rouge">ParRange</code> and <code class="highlighter-rouge">ParVector</code> implementing <code class="highlighter-rouge">immutable.ParSeq</code> and <code class="highlighter-rouge">ParArray</code>
+implementing <code class="highlighter-rouge">mutable.ParSeq</code>.</p>
+
+<p>Another hierarchy also exists that mirrors the traits of serial and parallel
+collections, but with a prefix <code class="highlighter-rouge">Gen</code>: <code class="highlighter-rouge">GenTraversable</code>, <code class="highlighter-rouge">GenIterable</code>,
+<code class="highlighter-rouge">GenSeq</code>, <code class="highlighter-rouge">GenMap</code> and <code class="highlighter-rouge">GenSet</code>. These traits are <em>parents</em> to both parallel
+and serial collections. This means that a method taking a <code class="highlighter-rouge">Seq</code> cannot receive
+a parallel collection, but a method taking a <code class="highlighter-rouge">GenSeq</code> is expected to work with
+both serial and parallel collections.</p>
+
+<p>Given the way these hierarchies were structured, code written for Scala 2.8 was
+fully compatible with Scala 2.9, and demanded serial behavior. Without being
+rewritten, it cannot take advantage of parallel collections, but the changes
+required are very small.</p>
+
+<h3 id="using-parallel-collections">Using Parallel Collections</h3>
+
+<p>Any collection can be converted into a parallel one by calling the method <code class="highlighter-rouge">par</code>
+on it. Likewise, any collection can be converted into a serial one by calling
+the method <code class="highlighter-rouge">seq</code> on it.</p>
+
+<p>If the collection was already of the type requested (parallel or serial), no
+conversion will take place. If one calls <code class="highlighter-rouge">seq</code> on a parallel collection or
+<code class="highlighter-rouge">par</code> on a serial collection, however, a new collection with the requested
+characteristic will be generated.</p>
+
+<p>Do not confuse <code class="highlighter-rouge">seq</code>, which turns a collection into a non-parallel collection,
+with <code class="highlighter-rouge">toSeq</code>, which returns a <code class="highlighter-rouge">Seq</code> created from the elements of the
+collection. Calling <code class="highlighter-rouge">toSeq</code> on a parallel collection will return a <code class="highlighter-rouge">ParSeq</code>,
+not a serial collection.</p>
+
+<h2 id="the-main-traits">The Main Traits</h2>
+
+<p>While there are many implementing classes and subtraits, there are some basic
+traits in the hierarchy, each of which providing more methods or more specific
+guarantees, but reducing the number of classes that could implement them.</p>
+
+<p>In the following subsections, I’ll give a brief description of the main traits
+and the idea behind them.</p>
+
+<h3 id="trait-traversableonce">Trait TraversableOnce</h3>
+
+<p>This trait is pretty much like trait <code class="highlighter-rouge">Traversable</code> described below, but with
+the limitation that you can only use it <em>once</em>. That is, any methods called on
+a <code class="highlighter-rouge">TraversableOnce</code> <em>may</em> render it unusable.</p>
+
+<p>This limitation makes it possible for the same methods to be shared between the
+collections and <code class="highlighter-rouge">Iterator</code>. This makes it possible for a method that works with
+an <code class="highlighter-rouge">Iterator</code> but not using <code class="highlighter-rouge">Iterator</code>-specific methods to actually be able to
+work with any collection at all, plus iterators, if rewritten to accept
+<code class="highlighter-rouge">TraversableOnce</code>.</p>
+
+<p>Because <code class="highlighter-rouge">TraversableOnce</code> unifies collections and iterators, and iterators are
+not considered collections, it does not appear in the previous graphs, which
+concern themselves only with collections.</p>
+
+<h3 id="trait-traversable">Trait Traversable</h3>
+
+<p>At the top of the <em>collection</em> hierarchy is trait <code class="highlighter-rouge">Traversable</code>. Its only
+abstract operation is</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def foreach[U](f: Elem =&gt; U)
+</code></pre></div></div>
+
+<p>The operation is meant to traverse all elements of the collection, and apply
+the given operation f to each element. The application is done for its side
+effect only; in fact any function result of f is discarded by foreach.</p>
+
+<p>Traversible objects can be finite or infinite. An example of an infinite
+traversable object is the stream of natural numbers <code class="highlighter-rouge">Stream.from(0)</code>. The
+method <code class="highlighter-rouge">hasDefiniteSize</code> indicates whether a collection is possibly infinite.
+If <code class="highlighter-rouge">hasDefiniteSize</code> returns true, the collection is certainly finite. If it
+returns false, the collection has not been not fully elaborated yet, so it
+might be infinite or finite.</p>
+
+<p>This class defines methods which can be efficiently implemented in terms of
+<code class="highlighter-rouge">foreach</code> (over 40 of them).</p>
+
+<h3 id="trait-iterable">Trait Iterable</h3>
+
+<p>This trait declares an abstract method <code class="highlighter-rouge">iterator</code> that returns an iterator that
+yields all the collection’s elements one by one. The <code class="highlighter-rouge">foreach</code> method in
+<code class="highlighter-rouge">Iterable</code> is implemented in terms of <code class="highlighter-rouge">iterator</code>. Subclasses of <code class="highlighter-rouge">Iterable</code>
+often override foreach with a direct implementation for efficiency.</p>
+
+<p>Class <code class="highlighter-rouge">Iterable</code> also adds some less-often used methods to <code class="highlighter-rouge">Traversable</code>, which
+can be implemented efficiently only if an <code class="highlighter-rouge">iterator</code> is available. They are
+summarized below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xs.iterator          An iterator that yields every element in xs, in the same order as foreach traverses elements.
+xs takeRight n       A collection consisting of the last n elements of xs (or, some arbitrary n elements, if no order is defined).
+xs dropRight n       The rest of the collection except xs takeRight n.
+xs sameElements ys   A test whether xs and ys contain the same elements in the same order
+</code></pre></div></div>
+
+<h3 id="seq-set-and-map">Seq, Set and Map</h3>
+
+<p>After <code class="highlighter-rouge">Iterable</code> there come three base traits which inherit from it: <code class="highlighter-rouge">Seq</code>,
+<code class="highlighter-rouge">Set</code>, and <code class="highlighter-rouge">Map</code>. All three have an <code class="highlighter-rouge">apply</code> method and all three implement the
+<code class="highlighter-rouge">PartialFunction</code> trait, but the meaning of <code class="highlighter-rouge">apply</code> is different in each case.</p>
+
+<p>I trust the meaning of <code class="highlighter-rouge">Seq</code>, <code class="highlighter-rouge">Set</code> and <code class="highlighter-rouge">Map</code> is intuitive. After them, the
+classes break up in specific implementations that offer particular guarantees
+with regards to performance, and the methods it makes available as a result of
+it. Also available are some traits with further refinements, such as
+<code class="highlighter-rouge">LinearSeq</code>, <code class="highlighter-rouge">IndexedSeq</code> and <code class="highlighter-rouge">SortedSet</code>.</p>
+
+<h2 id="complete-overview">Complete Overview</h2>
+
+<h3 id="base-classes-and-traits">Base Classes and Traits</h3>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">TraversableOnce</code> – All methods and behavior common to collections and iterators.</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">Traversable</code> – Basic collection class. Can be implemented just with <code class="highlighter-rouge">foreach</code>.</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">TraversableProxy</code> – Proxy for a <code class="highlighter-rouge">Traversable</code>. Just point <code class="highlighter-rouge">self</code> to the real collection.</li>
+          <li><code class="highlighter-rouge">TraversableView</code> – A Traversable with some non-strict methods.</li>
+          <li><code class="highlighter-rouge">TraversableForwarder</code> – Forwards most methods to <code class="highlighter-rouge">underlying</code>, except <code class="highlighter-rouge">toString</code>, <code class="highlighter-rouge">hashCode</code>, <code class="highlighter-rouge">equals</code>, <code class="highlighter-rouge">stringPrefix</code>, <code class="highlighter-rouge">newBuilder</code>, <code class="highlighter-rouge">view</code> and all calls creating a new iterable object of the same kind.</li>
+          <li><code class="highlighter-rouge">mutable.Traversable</code> and <code class="highlighter-rouge">immutable.Traversable</code> – same thing as <code class="highlighter-rouge">Traversable</code>, but restricting the collection type.</li>
+          <li>Other special-cases <code class="highlighter-rouge">Iterable</code> classes, such as <code class="highlighter-rouge">MetaData</code>, exists.</li>
+          <li><code class="highlighter-rouge">Iterable</code> – A collection for which an <code class="highlighter-rouge">Iterator</code> can be created (through <code class="highlighter-rouge">iterator</code>).
+            <ul>
+              <li><code class="highlighter-rouge">IterableProxy</code>, <code class="highlighter-rouge">IterableView</code>, <code class="highlighter-rouge">mutable</code> and <code class="highlighter-rouge">immutable.Iterable</code>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">Iterator</code> – A trait which is not descendant of <code class="highlighter-rouge">Traversable</code>. Define <code class="highlighter-rouge">next</code> and <code class="highlighter-rouge">hasNext</code>.</p>
+        <ul>
+          <li><code class="highlighter-rouge">CountedIterator</code> – An <code class="highlighter-rouge">Iterator</code> defining <code class="highlighter-rouge">count</code>, which returns the elements seen so  far.</li>
+          <li><code class="highlighter-rouge">BufferedIterator</code> – Defines <code class="highlighter-rouge">head</code>, which returns the next element without consuming it.</li>
+          <li>Other special-cases <code class="highlighter-rouge">Iterator</code> classes, such as <code class="highlighter-rouge">Source</code>, exists.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-sequences">The Sequences</h3>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">Seq</code> – A sequence of elements. One assumes a well-defined size and element repetition. Extends <code class="highlighter-rouge">PartialFunction</code> as well.</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">IndexedSeq</code> – Sequences that support O(1) element access and O(1) length computation.
+        <ul>
+          <li><code class="highlighter-rouge">IndexedSeqView</code></li>
+          <li><code class="highlighter-rouge">immutable.PagedSeq</code> – An implementation of <code class="highlighter-rouge">IndexedSeq</code> where the elements are produced on-demand by a function passed through the constructor.</li>
+          <li>
+            <p><code class="highlighter-rouge">immutable.IndexedSeq</code></p>
+
+            <ul>
+              <li><code class="highlighter-rouge">immutable.Range</code> – A delimited sequence of integers, closed on the lower end, open on the high end, and with a step.
+                <ul>
+                  <li><code class="highlighter-rouge">immutable.Range.Inclusive</code> – A <code class="highlighter-rouge">Range</code> closed on the high end as well.</li>
+                </ul>
+              </li>
+              <li><code class="highlighter-rouge">immutable.NumericRange</code> – A more generic version of <code class="highlighter-rouge">Range</code> which works with any <code class="highlighter-rouge">Integral</code>.
+                <ul>
+                  <li><code class="highlighter-rouge">immutable.NumericRange.Inclusive</code>, <code class="highlighter-rouge">immutable.NumericRange.Exclusive</code>.</li>
+                  <li><code class="highlighter-rouge">immutable.WrappedString</code>, <code class="highlighter-rouge">immutable.RichString</code> – Wrappers which enables seeing a <code class="highlighter-rouge">String</code> as a <code class="highlighter-rouge">Seq[Char]</code>, while still preserving the <code class="highlighter-rouge">String</code> methods. I’m not sure what the difference between them is.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">mutable.IndexedSeq</code>
+            <ul>
+              <li><code class="highlighter-rouge">mutable.GenericArray</code> – An <code class="highlighter-rouge">Seq</code>-based array-like structure. Note that the “class” <code class="highlighter-rouge">Array</code> is Java’s <code class="highlighter-rouge">Array</code>, which is more of a memory storage method than a class.</li>
+              <li><code class="highlighter-rouge">mutable.ResizableArray</code> – Internal class used by classes based on resizable arrays.</li>
+              <li><code class="highlighter-rouge">mutable.PriorityQueue</code>, <code class="highlighter-rouge">mutable.SynchronizedPriorityQueue</code> – Classes implementing prioritized queues – queues where the elements are dequeued according to an <code class="highlighter-rouge">Ordering</code> first, and order of queueing last.</li>
+              <li><code class="highlighter-rouge">mutable.PriorityQueueProxy</code> – an abstract <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">PriorityQueue</code>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">LinearSeq</code> – A trait for linear sequences, with efficient time for <code class="highlighter-rouge">isEmpty</code>, <code class="highlighter-rouge">head</code> and <code class="highlighter-rouge">tail</code>.</p>
+
+        <ul>
+          <li><code class="highlighter-rouge">immutable.LinearSeq</code>
+            <ul>
+              <li><code class="highlighter-rouge">immutable.List</code> – An immutable, singlely-linked, list implementation.</li>
+              <li><code class="highlighter-rouge">immutable.Stream</code> – A lazy-list. Its elements are only computed on-demand, but memoized (kept in memory) afterwards. It can be theoretically infinite.</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">mutable.LinearSeq</code>
+            <ul>
+              <li><code class="highlighter-rouge">mutable.DoublyLinkedList</code> – A list with mutable <code class="highlighter-rouge">prev</code>, <code class="highlighter-rouge">head</code> (<code class="highlighter-rouge">elem</code>) and <code class="highlighter-rouge">tail</code> (<code class="highlighter-rouge">next</code>).</li>
+              <li><code class="highlighter-rouge">mutable.LinkedList</code> – A list with mutable <code class="highlighter-rouge">head</code> (<code class="highlighter-rouge">elem</code>) and <code class="highlighter-rouge">tail</code> (<code class="highlighter-rouge">next</code>).</li>
+              <li><code class="highlighter-rouge">mutable.MutableList</code> – A class used internally to implement classes based on mutable lists.
+                <ul>
+                  <li><code class="highlighter-rouge">mutable.Queue</code>, <code class="highlighter-rouge">mutable.QueueProxy</code> – A data structure optimized for FIFO (First-In, First-Out) operations.</li>
+                  <li><code class="highlighter-rouge">mutable.QueueProxy</code> – A <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">mutable.Queue</code>.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">SeqProxy</code>, <code class="highlighter-rouge">SeqView</code>, <code class="highlighter-rouge">SeqForwarder</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">immutable.Seq</code></p>
+
+        <ul>
+          <li><code class="highlighter-rouge">immutable.Queue</code> – A class implementing a FIFO-optimized (First-In, First-Out) data structure. There is no common superclass of both <code class="highlighter-rouge">mutable</code> and <code class="highlighter-rouge">immutable</code> queues.</li>
+          <li><code class="highlighter-rouge">immutable.Stack</code> – A class implementing a LIFO-optimized (Last-In, First-Out) data   structure. There is no common superclass of both <code class="highlighter-rouge">mutable</code> <code class="highlighter-rouge">immutable</code> stacks.</li>
+          <li><code class="highlighter-rouge">immutable.Vector</code> – ?</li>
+          <li><code class="highlighter-rouge">scala.xml.NodeSeq</code> – A specialized XML class which extends <code class="highlighter-rouge">immutable.Seq</code>.</li>
+          <li><code class="highlighter-rouge">immutable.IndexedSeq</code> – As seen above.</li>
+          <li><code class="highlighter-rouge">immutable.LinearSeq</code> – As seen above.</li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">mutable.ArrayStack</code> – A class implementing a LIFO-optimized data structure using arrays. Supposedly significantly faster than a normal stack.</li>
+      <li><code class="highlighter-rouge">mutable.Stack</code>, <code class="highlighter-rouge">mutable.SynchronizedStack</code> – Classes implementing a LIFO-optimized data structure.</li>
+      <li><code class="highlighter-rouge">mutable.StackProxy</code> – A <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">mutable.Stack</code>..</li>
+      <li>
+        <p><code class="highlighter-rouge">mutable.Seq</code></p>
+
+        <ul>
+          <li><code class="highlighter-rouge">mutable.Buffer</code> – Sequence of elements which can be changed by appending, prepending or inserting new members.
+            <ul>
+              <li><code class="highlighter-rouge">mutable.ArrayBuffer</code> – An implementation of the <code class="highlighter-rouge">mutable.Buffer</code> class, with constant amortized time for the append, update and random access operations. It has some specialized subclasses, such as <code class="highlighter-rouge">NodeBuffer</code>.</li>
+              <li><code class="highlighter-rouge">mutable.BufferProxy</code>, <code class="highlighter-rouge">mutable.SynchronizedBuffer</code>.</li>
+              <li><code class="highlighter-rouge">mutable.ListBuffer</code> – A buffer backed by a list. It provides constant time append and prepend, with most other operations being linear.</li>
+              <li><code class="highlighter-rouge">mutable.ObservableBuffer</code> – A <em>mixin</em> trait which, when mixed to a <code class="highlighter-rouge">Buffer</code>, provides notification events through a <code class="highlighter-rouge">Publisher</code> interfaces.</li>
+              <li><code class="highlighter-rouge">mutable.IndexedSeq</code> – As seen above.</li>
+              <li><code class="highlighter-rouge">mutable.LinearSeq</code> – As seen above.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-sets">The Sets</h3>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">Set</code> – A set is a collection that includes at most one of any object.</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">SortedSet</code> – A set whose elements are ordered.
+        <ul>
+          <li><code class="highlighter-rouge">immutable.SortedSet</code>
+            <ul>
+              <li><code class="highlighter-rouge">immutable.BitSet</code> – A set of integers stored as a bitset.</li>
+              <li><code class="highlighter-rouge">immutable.TreeSet</code> – An implementation of a <code class="highlighter-rouge">SortedSet</code> based on a tree.</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">mutable.SortedSet</code>
+            <ul>
+              <li><code class="highlighter-rouge">mutable.BitSet</code> – A set of integers stored as a bitset.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">SetProxy</code> – A <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">Set</code>.</p>
+      </li>
+      <li><code class="highlighter-rouge">immutable.Set</code>
+        <ul>
+          <li><code class="highlighter-rouge">immutable.HashSet</code> – An implementation of <code class="highlighter-rouge">Set</code> based on element hashing.</li>
+          <li><code class="highlighter-rouge">immutable.ListSet</code> – An implementation of <code class="highlighter-rouge">Set</code> based on lists.</li>
+          <li>Additional set classes exists to provide optimized implementations for sets from 0 to 4 elements.</li>
+          <li><code class="highlighter-rouge">immutable.SetProxy</code> – A <code class="highlighter-rouge">Proxy</code> for an immutable <code class="highlighter-rouge">Set</code>.</li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">mutable.Set</code>
+        <ul>
+          <li><code class="highlighter-rouge">mutable.HashSet</code> – An implementation of <code class="highlighter-rouge">Set</code> based on element hashing.</li>
+          <li><code class="highlighter-rouge">mutable.ImmutableSetAdaptor</code> – A class implementing a mutable <code class="highlighter-rouge">Set</code> from an immutable <code class="highlighter-rouge">Set</code>.</li>
+          <li><code class="highlighter-rouge">LinkedHashSet</code> – An implementation of <code class="highlighter-rouge">Set</code> based on lists.</li>
+          <li><code class="highlighter-rouge">ObservableSet</code> – A <em>mixin</em> trait which, when mixed with a <code class="highlighter-rouge">Set</code>, provides notification events through a <code class="highlighter-rouge">Publisher</code> interface.</li>
+          <li><code class="highlighter-rouge">SetProxy</code> – A <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">Set</code>.</li>
+          <li><code class="highlighter-rouge">SynchronizedSet</code> – A <em>mixin</em> trait which, when mixed with a <code class="highlighter-rouge">Set</code>, provides notification events through a <code class="highlighter-rouge">Publisher</code> interface.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-maps">The Maps</h3>
+
+<ul>
+  <li><code class="highlighter-rouge">Map</code> – An <code class="highlighter-rouge">Iterable</code> of <code class="highlighter-rouge">Tuple2</code>, which also provides methods for retrieving a value (the second element of the tuple) given a key (the first element of the tuple). Extends <code class="highlighter-rouge">PartialFunction</code> as well.
+    <ul>
+      <li><code class="highlighter-rouge">MapProxy</code> – A <code class="highlighter-rouge">Proxy</code> for a <code class="highlighter-rouge">Map</code>.</li>
+      <li><code class="highlighter-rouge">DefaultMap</code> – A trait implementing some of <code class="highlighter-rouge">Map</code>’s abstract methods.</li>
+      <li><code class="highlighter-rouge">SortedMap</code> – A <code class="highlighter-rouge">Map</code> whose keys are sorted.
+        <ul>
+          <li><code class="highlighter-rouge">immutable.SortMap</code>
+            <ul>
+              <li><code class="highlighter-rouge">immutable.TreeMap</code> – A class implementing <code class="highlighter-rouge">immutable.SortedMap</code>.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">immutable.Map</code>
+        <ul>
+          <li><code class="highlighter-rouge">immutable.MapProxy</code></li>
+          <li><code class="highlighter-rouge">immutable.HashMap</code> – A class implementing <code class="highlighter-rouge">immutable.Map</code> through key hashing.</li>
+          <li><code class="highlighter-rouge">immutable.IntMap</code> – A class implementing <code class="highlighter-rouge">immutable.Map</code> specialized for <code class="highlighter-rouge">Int</code> keys. Uses a tree based on the binary digits of the keys.</li>
+          <li><code class="highlighter-rouge">immutable.ListMap</code> – A class implementing <code class="highlighter-rouge">immutable.Map</code> through lists.</li>
+          <li><code class="highlighter-rouge">immutable.LongMap</code> – A class implementing <code class="highlighter-rouge">immutable.Map</code> specialized for <code class="highlighter-rouge">Long</code> keys. See <code class="highlighter-rouge">IntMap</code>.</li>
+          <li>There are additional classes optimized for an specific number of elements.</li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">mutable.Map</code>
+        <ul>
+          <li><code class="highlighter-rouge">mutable.HashMap</code> – A class implementing <code class="highlighter-rouge">mutable.Map</code> through key hashing.</li>
+          <li><code class="highlighter-rouge">mutable.ImmutableMapAdaptor</code> – A class implementing a <code class="highlighter-rouge">mutable.Map</code> from an existing <code class="highlighter-rouge">immutable.Map</code>.</li>
+          <li><code class="highlighter-rouge">mutable.LinkedHashMap</code> – ?</li>
+          <li><code class="highlighter-rouge">mutable.ListMap</code> – A class implementing <code class="highlighter-rouge">mutable.Map</code> through lists.</li>
+          <li><code class="highlighter-rouge">mutable.MultiMap</code> – A class accepting more than one distinct value for each key.</li>
+          <li><code class="highlighter-rouge">mutable.ObservableMap</code> – A <em>mixin</em> which, when mixed with a <code class="highlighter-rouge">Map</code>, publishes events to observers through a <code class="highlighter-rouge">Publisher</code> interface.</li>
+          <li><code class="highlighter-rouge">mutable.OpenHashMap</code> – A class based on an open hashing algorithm.</li>
+          <li><code class="highlighter-rouge">mutable.SynchronizedMap</code> – A <em>mixin</em> which should be mixed with a <code class="highlighter-rouge">Map</code> to provide a version of it with synchronized methods.</li>
+          <li><code class="highlighter-rouge">mutable.MapProxy</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bonus-questions">Bonus Questions</h2>
+
+<ul>
+  <li>Why the Like classes exist (e.g. TraversableLike)?</li>
+</ul>
+
+<p>This was done to achieve maximum code reuse. The concrete <em>generic</em>
+implementation for classes with a certain structure (a traversable, a map, etc)
+is done in the Like classes. The classes intended for general consumption,
+then, override selected methods that can be optmized.</p>
+
+<ul>
+  <li>What the companion methods are for (e.g. List.companion)?</li>
+</ul>
+
+<p>The builder for the classes, ie, the object which knows how to create instances
+of that class in a way that can be used by methods like <code class="highlighter-rouge">map</code>, is created by a
+method in the companion object. So, in order to build an object of type X, I
+need to get that builder from the companion object of X. Unfortunately, there
+is no way, in Scala, to get from class X to object X. Because of that, there is
+a method defined in each instance of X, <code class="highlighter-rouge">companion</code>, which returns the
+companion object of class X.</p>
+
+<p>While there might be some use for such method in normal programs, its target is
+enabling code reuse in the collection library.</p>
+
+<ul>
+  <li>How I know what implicit objects are in scope at a given point?</li>
+</ul>
+
+<p>You aren’t supposed to care about that. They are implicit precisely so that you
+don’t need to figure out how to make it work.</p>
+
+<p>These implicits exists to enable the methods on the collections to be defined
+on parent classes but still return a collection of the same type. For example,
+the <code class="highlighter-rouge">map</code> method is defined on <code class="highlighter-rouge">TraversableLike</code>, but if you used on a <code class="highlighter-rouge">List</code>
+you’ll get a <code class="highlighter-rouge">List</code> back.</p>
+
+<p>This answer was originally submitted in response to <a href="http://stackoverflow.com/q/1722137/53013">this question</a> on Stack
+Overflow.</p>
+
+
+				</div>
+
+				<div class="content-contributors">
+    <h3>Contributors to this page:</h3>
+    <div id="contributors" class="contributors-container"></div>
+</div>
+
+			</div>
+		</div>
+
+		<!-- TOC -->
+		<div class="content-nav">
+	<div class="inner-box sidebar-toc-wrapper" style="">
+		<h5 class="contents">Contents</h5>
+		<div class="inner-toc" id="sidebar-toc">
+
+      <ul>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/finding-symbols.html">How do I find what some symbol means or does?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/yield.html">How does yield work?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/context-bounds.html">What are Scala context bounds?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/stream-view-iterator.html">What is the difference between view, stream and iterator?</a></li>
+            
+            
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/breakout.html">What is breakOut, and how does it work?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/chaining-implicits.html">How can I chain/nest implicit conversions?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/finding-implicits.html">Where does Scala look for implicits?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/collections.html">How are the collections structured? Which one should I choose?</a></li>
+            
+            <div id="toc"></div>
+          
+        
+          
+        
+          
+        
+          
+             <!-- this must be English, so get the other documents' titles -->
+            <li><a href="/tutorials/FAQ/initialization-order.html">Why is my abstract or overridden val null?</a></li>
+            
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+
+      
+		</div>
+		<hr>
+		<div class="help-us"><a href="https://github.com/scala/docs.scala-lang/blob/master/_overviews/FAQ/collections.md"><i class="fa fa-pencil" aria-hidden="true"></i> Problem with this page?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please help us fix it!</a></div>
+	</div>
+</div>
+
+	</div>
+</section>
+
+
+</main>
+
+<footer id="site-footer">
+    <div class="wrap">
+      <div class="site-footer-top">
+        
+          <ul class="documentation">
+            <li><h3>Documentation</h3></li>
+            
+              <li><a href="/getting-started.html">Getting Started</a></li>
+            
+              <li><a href="https://www.scala-lang.org/api/current/index.html">API</a></li>
+            
+              <li><a href="/overviews">Overviews/Guides</a></li>
+            
+              <li><a href="http://scala-lang.org/files/archive/spec/2.12/">Language Specification</a></li>
+            
+          </ul>
+        
+          <ul class="download">
+            <li><h3>Download</h3></li>
+            
+              <li><a href="http://scala-lang.org/download/">Current Version</a></li>
+            
+              <li><a href="http://scala-lang.org/download/all.html">All versions</a></li>
+            
+          </ul>
+        
+          <ul class="community">
+            <li><h3>Community</h3></li>
+            
+              <li><a href="http://scala-lang.org/community/">Community</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#mailing-lists">Mailing Lists</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#chat-rooms">Chat Rooms & More</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#community-libraries-and-tools">Libraries and Tools</a></li>
+            
+              <li><a href="http://scala.epfl.ch/">The Scala Center</a></li>
+            
+          </ul>
+        
+          <ul class="contribute">
+            <li><h3>Contribute</h3></li>
+            
+              <li><a href="http://scala-lang.org/contribute/">How to help</a></li>
+            
+              <li><a href="http://scala-lang.org/contribute/bug-reporting-guide.html">Report an Issue</a></li>
+            
+          </ul>
+        
+          <ul class="scala">
+            <li><h3>Scala</h3></li>
+            
+              <li><a href="http://scala-lang.org/blog/">Blog</a></li>
+            
+              <li><a href="http://scala-lang.org/conduct/">Code of Conduct</a></li>
+            
+              <li><a href="http://scala-lang.org/license/">License</a></li>
+            
+          </ul>
+        
+          <ul class="social">
+            <li><h3>Social</h3></li>
+            
+              <li><a href="https://github.com/scala/scala">GitHub</a></li>
+            
+              <li><a href="https://twitter.com/scala_lang">Twitter</a></li>
+            
+          </ul>
+        
+      </div>
+      <div class="site-footer-bottom">
+        <p></p>
+        <img src="/resources/img/frontpage/scala-logo-white.png" alt="">
+      </div>
+    </div>
+    <a class="back-to-top in" href="#" id="scroll-to-top-btn">
+      <i class="fa fa-angle-up"></i>
+    </a>
+</footer>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script>(window.jQuery) || document.write('<script src="/scripts/jquery-3.1.1.min.js"><\/script>');</script>
+<script src="/resources/js/vendor/jquery.autocomplete.js" type="text/javascript"></script>
+
+<!-- moment js -->
+<script src="/resources/js/vendor/moment.min.js" type="text/javascript"></script>
+
+<!-- tweet feed -->
+<script src="/resources/js/tweetMachine-update.js" type="text/javascript"></script>
+
+<!-- prettify js -->
+<script src="/resources/js/vendor/prettify/prettify.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/prettify/lang-scala.js" type="text/javascript"></script>
+
+<!-- unslider js -->
+<script src="/resources/js/vendor/unslider.js" type="text/javascript"></script>
+
+<!-- Highlight -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/java.min.js" type="text/javascript"></script>
+
+<!-- CodeMirror -->
+<script src="/resources/js/vendor/codemirror/codemirror.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/codemirror/clike.js" type="text/javascript"></script>
+
+<!-- TOC -->
+<script src="/resources/js/vendor/jquery.sticky.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/toc.js" type="text/javascript"></script>
+
+<!-- Blog search -->
+<script src="/resources/js/vendor/jekyll.search.min.js" type="text/javascript"></script>
+
+<!-- Custom javascript -->
+<script src="/resources/js/functions.js" type="text/javascript"></script>
+
+
+
+<!-- Alogolia search for doc -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+apiKey: 'fbc439670f5d4e3730cdcb715c359391',
+indexName: 'scala-lang',
+inputSelector: '#doc-search-bar',
+algoliaOptions: { 'facetFilters': ["language:en"] },
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
+</body>
+
+</html>
+

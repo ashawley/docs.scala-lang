@@ -1,0 +1,585 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Books | Scala Documentation</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/resources/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="/resources/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="manifest" href="/resources/site.webmanifest">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#15a9ce">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom stylesheet -->
+    <link href="/resources/css/unslider-dots.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/unslider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/resources/css/highlightjs.css" type="text/css" />
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/resources/css/monospace.css" type="text/css" />
+
+    <!-- Atom feeds -->
+    <link rel="alternate" type="application/atom+xml" title="News Feed" href="http://scala-lang.org/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Blog Feed" href="http://scala-lang.org/feed/blog.xml" />
+
+    <!-- Algolia stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+ 
+  </head>
+  <body>
+
+
+<div class="navigation-fade-screen"></div>
+
+<header id="site-header">
+  <div class="wrap">
+    <nav class="navigation" role="menu">
+      <a href="http://scala-lang.org" class="navigation-bdand">
+        <img src="/resources/img/frontpage/scala-logo-white@2x.png" alt="">
+      </a>
+      <div class="navigation-panel-button">
+        <i class="fa fa-bars"></i>
+      </div>
+      <ul class="navigation-menu">
+        
+            <li class="navigation-menu-item">
+              <a href="/" class="active">Documentation</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/download/" >Download</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/community/" >Community</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://index.scala-lang.org" >Libraries</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/contribute/" >Contribute</a>
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="https://www.scala-lang.org/blog/" >Blog</a>
+            </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<header id="doc-header">
+  <div class="wrap" style="padding: 0px;">
+    <nav class="doc-navigation" role="menu">
+      <a href="/" class="navigation-bdand">
+        <img src="/resources/img/documentation-logo@2x.png" alt="">
+      </a>
+      <div class="navigation-ellipsis">
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+      <ul class="navigation-menu">
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="api" >API</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="https://www.scala-lang.org/api/current/">Current</a>
+                  </li>
+                
+                  <li>
+                    <a href="https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/">Nightly</a>
+                  </li>
+                
+                  <li>
+                    <a href="/api/all.html">All Versions</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="learn" >Learn</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="/getting-started.html">Getting Started</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tour/tour-of-scala.html">Tour of Scala</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tutorials/scala-for-java-programmers.html">Scala for Java Programmers</a>
+                  </li>
+                
+                  <li>
+                    <a href="/learn.html">Online Resources</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="#" id="reference" >Reference</a>
+                
+                <ul class="navigation-dropdown">
+                
+                  <li>
+                    <a href="/overviews/index.html">Guides & Overviews</a>
+                  </li>
+                
+                  <li>
+                    <a href="/books.html">Books</a>
+                  </li>
+                
+                  <li>
+                    <a href="/tutorials/FAQ/index.html">Scala FAQs</a>
+                  </li>
+                
+                  <li>
+                    <a href="http://scala-lang.org/files/archive/spec/2.12/">Language Spec</a>
+                  </li>
+                
+                </ul>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/style/index.html" id="style guide" >Style Guide</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/cheatsheets/index.html" id="cheatsheet" >Cheatsheet</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/glossary/index.html" id="glossary" >Glossary</a>
+                
+            </li>
+        
+            <li class="navigation-menu-item">
+              <a href="/sips/index.html" id="sips" >SIPs</a>
+                
+            </li>
+        
+      </ul>
+    </nav>
+    <nav class="doc-navigation-submenus">
+      
+        
+          <ul class="navigation-submenu" id="api" style="display: none;">
+            
+              <li>
+                <a href="https://www.scala-lang.org/api/current/">Current</a>
+              </li>
+            
+              <li>
+                <a href="https://www.scala-lang.org/files/archive/nightly/2.12.x/api/2.12.x/">Nightly</a>
+              </li>
+            
+              <li>
+                <a href="/api/all.html">All Versions</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+          <ul class="navigation-submenu" id="learn" style="display: none;">
+            
+              <li>
+                <a href="/getting-started.html">Getting Started</a>
+              </li>
+            
+              <li>
+                <a href="/tour/tour-of-scala.html">Tour of Scala</a>
+              </li>
+            
+              <li>
+                <a href="/tutorials/scala-for-java-programmers.html">Scala for Java Programmers</a>
+              </li>
+            
+              <li>
+                <a href="/learn.html">Online Resources</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+          <ul class="navigation-submenu" id="reference" style="display: none;">
+            
+              <li>
+                <a href="/overviews/index.html">Guides & Overviews</a>
+              </li>
+            
+              <li>
+                <a href="/books.html">Books</a>
+              </li>
+            
+              <li>
+                <a href="/tutorials/FAQ/index.html">Scala FAQs</a>
+              </li>
+            
+              <li>
+                <a href="http://scala-lang.org/files/archive/spec/2.12/">Language Spec</a>
+              </li>
+            
+          </ul>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <ul class="navigation-submenu ellipsis-menu" style="display: none;">
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="/style/index.html">Style Guide</a></li>
+          
+        
+          
+            <li><a href="/cheatsheets/index.html">Cheatsheet</a></li>
+          
+        
+          
+            <li><a href="/glossary/index.html">Glossary</a></li>
+          
+        
+          
+            <li><a href="/sips/index.html">SIPs</a></li>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="inner-main">
+
+	<!-- Title -->
+	<section class="title-page">
+		<div class="wrap">
+			<div class="content-title-documentation">
+
+				<h1>Books</h1>
+				<div class="search-container">
+					<div class="icon-search">
+						<i class="fa fa-search"></i>
+					</div>
+					<input type="text" class="doc-search" id="doc-search-bar" placeholder="Search in doc...">
+					<ul class="result-container" id="result-container" style="display: none;"></ul>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	 <section class="full-width">
+	<div class="wrap">
+		<div class="content-primary">
+			<div class="inner-box toc-context">
+				<p>More and more books being published about Scala every year. Here, you can find
+just a small selection of the many available titles.</p>
+
+<p><br /></p>
+
+<div class="books-list">
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="http://booksites.artima.com/programming_in_scala_3ed">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/ProgrammingInScala.gif" alt="Programming in Scala, 3rd ed" />
+          </div>
+          <h3>Programming in Scala, 3rd ed</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Updated for Scala 2.12</b></p>
+        <p class="author"> Martin Odersky, Lex Spoon, Bill Benners</p>
+        <p class="published"> <a href=""></a></p>
+        <p class="description"><p>(First edition <a href="http://www.artima.com/pins1ed/">available for free online reading</a>)</p>
+
+<p>Being co-written by the language’s designer, Martin Odersky, you will find it provides additional depth and clarity to the diverse features of the language. The book provides both an authoritative reference for Scala and a systematic tutorial covering all the features in the language. Once you are familiar with the basics of Scala you will appreciate having this source of invaluable examples and precise explanations of Scala on hand. The book is available from <a href="http://booksites.artima.com/programming_in_scala_3ed">Artima</a>. Award winning book - <a href="http://www.drdobbs.com/joltawards/232601431">Jolt Productivity award</a> for Technical Books.</p>
+</p>
+      </div>
+    </div>
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="http://www.horstmann.com/scala/index.html">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/scala_for_the_impatient.png" alt="Scala for the Impatient" />
+          </div>
+          <h3>Scala for the Impatient</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Available Now</b></p>
+        <p class="author"> Cay S. Horstmann</p>
+        <p class="published"> <a href="">Addison-Wesley</a></p>
+        <p class="description"><p>What you get:</p>
+
+<ul>
+  <li>A rapid introduction to Scala for programmers who are competent in Java, C#, or C++</li>
+  <li>Blog-length chunks of information that you can digest quickly</li>
+  <li>An organization that you’ll find useful as a quick reference</li>
+</ul>
+
+<p>What you don’t get:</p>
+
+<ul>
+  <li>An introduction into programming or object-oriented design</li>
+  <li>Religion about the superiority of one paradigm or another</li>
+  <li>Cute or academic examples</li>
+  <li>Mind-numbing details about syntax minutiae</li>
+</ul>
+</p>
+      </div>
+    </div>
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="http://shop.oreilly.com/product/0636920033073.do">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/ProgrammingScala-final-border.gif" alt="Programming Scala" />
+          </div>
+          <h3>Programming Scala</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Updated for Scala 2.11</b></p>
+        <p class="author"> Alex Payne, Dean Wampler</p>
+        <p class="published"> <a href="http://www.oreilly.com/">O’Reilly</a></p>
+        <p class="description"><p>Both are industry experts, Alex Payne being the lead API programmer at Twitter, a social networking service based on Scala. O’Reilly, the publisher, writes: “Learn how to be more productive with Scala, a new multi-paradigm language for the Java Virtual Machine (JVM) that integrates features of both object-oriented and functional programming. With this book, you’ll discover why Scala is ideal for highly scalable, component-based applications that support concurrency and distribution. You’ll also learn how to leverage the wealth of Java class libraries to meet the practical needs of enterprise and Internet projects more easily.”</p>
+</p>
+      </div>
+    </div>
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="https://www.manning.com/books/functional-programming-in-scala">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/FPiS_93x116.png" alt="Functional Programming in Scala" />
+          </div>
+          <h3>Functional Programming in Scala</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Available now</b></p>
+        <p class="author"> Paul Chiusano, Rúnar Bjarnason</p>
+        <p class="published"> <a href="http://www.manning.com/">Manning</a></p>
+        <p class="description"><p>“Functional programming (FP) is a style of software development emphasizing functions that don’t depend on program state… Functional Programming in Scala is a serious tutorial for programmers looking to learn FP and apply it to the everyday business of coding. The book guides readers from basic techniques to advanced topics in a logical, concise, and clear progression. In it, you’ll find concrete examples and exercises that open up the world of functional programming.”</p>
+</p>
+      </div>
+    </div>
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="http://www.manning.com/suereth">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/icon_Scala_in_Depth_93x116.png" alt="Scala in Depth" />
+          </div>
+          <h3>Scala in Depth</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Available now</b></p>
+        <p class="author"> Joshua D. Suereth</p>
+        <p class="published"> <a href="http://www.manning.com/">Manning</a></p>
+        <p class="description"><p>“While information about the Scala language is abundant, skilled practitioners, great examples, and insight into the best practices of the community are harder to find. Scala in Depth bridges that gap, preparing you to adopt Scala successfully for real world projects. Scala in Depth is a unique new book designed to help you integrate Scala effectively into your development process. By presenting the emerging best practices and designs from the Scala community, it guides you though dozens of powerful techniques example by example. There’s no heavy-handed theory here-just lots of crisp, practical guides for coding in Scala.”</p>
+</p>
+      </div>
+    </div>
+  
+    <div class="book-item">
+      <div class="book-item-header">
+        <a href="http://www.artima.com/shop/scala_puzzlers">
+          <div class="content-img-boook">
+            <img src="/resources/img/books/scala-puzzlers-book.jpg" alt="Scala Puzzlers" />
+          </div>
+          <h3>Scala Puzzlers</h3>
+        </a>
+      </div>
+      <div class="book-item-main">
+        <p><b>Available now</b></p>
+        <p class="author"> Andrew Phillips, Nermin Šerifović</p>
+        <p class="published"> <a href="http://www.artima.com/index.jsp">Artima Press</a></p>
+        <p class="description"><p>“Getting code to do what we want it to do is perhaps the essence of our purpose as developers. So there are few things more intriguing or important than code that we think we understand, but that behaves rather contrary to our expectations. Scala Puzzlers is a collection of such examples in Scala. It is not only an entertaining and instructive way of understanding this highly expressive language better. It will also help you recognize many counter-intuitive traps and pitfalls and prevent them from inflicting further production bug hunt stress on Scala developers.”</p>
+</p>
+      </div>
+    </div>
+  
+</div>
+
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+</main>
+
+<footer id="site-footer">
+    <div class="wrap">
+      <div class="site-footer-top">
+        
+          <ul class="documentation">
+            <li><h3>Documentation</h3></li>
+            
+              <li><a href="/getting-started.html">Getting Started</a></li>
+            
+              <li><a href="https://www.scala-lang.org/api/current/index.html">API</a></li>
+            
+              <li><a href="/overviews">Overviews/Guides</a></li>
+            
+              <li><a href="http://scala-lang.org/files/archive/spec/2.12/">Language Specification</a></li>
+            
+          </ul>
+        
+          <ul class="download">
+            <li><h3>Download</h3></li>
+            
+              <li><a href="http://scala-lang.org/download/">Current Version</a></li>
+            
+              <li><a href="http://scala-lang.org/download/all.html">All versions</a></li>
+            
+          </ul>
+        
+          <ul class="community">
+            <li><h3>Community</h3></li>
+            
+              <li><a href="http://scala-lang.org/community/">Community</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#mailing-lists">Mailing Lists</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#chat-rooms">Chat Rooms & More</a></li>
+            
+              <li><a href="http://scala-lang.org/community/index.html#community-libraries-and-tools">Libraries and Tools</a></li>
+            
+              <li><a href="http://scala.epfl.ch/">The Scala Center</a></li>
+            
+          </ul>
+        
+          <ul class="contribute">
+            <li><h3>Contribute</h3></li>
+            
+              <li><a href="http://scala-lang.org/contribute/">How to help</a></li>
+            
+              <li><a href="http://scala-lang.org/contribute/bug-reporting-guide.html">Report an Issue</a></li>
+            
+          </ul>
+        
+          <ul class="scala">
+            <li><h3>Scala</h3></li>
+            
+              <li><a href="http://scala-lang.org/blog/">Blog</a></li>
+            
+              <li><a href="http://scala-lang.org/conduct/">Code of Conduct</a></li>
+            
+              <li><a href="http://scala-lang.org/license/">License</a></li>
+            
+          </ul>
+        
+          <ul class="social">
+            <li><h3>Social</h3></li>
+            
+              <li><a href="https://github.com/scala/scala">GitHub</a></li>
+            
+              <li><a href="https://twitter.com/scala_lang">Twitter</a></li>
+            
+          </ul>
+        
+      </div>
+      <div class="site-footer-bottom">
+        <p></p>
+        <img src="/resources/img/frontpage/scala-logo-white.png" alt="">
+      </div>
+    </div>
+    <a class="back-to-top in" href="#" id="scroll-to-top-btn">
+      <i class="fa fa-angle-up"></i>
+    </a>
+</footer>
+
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+<script>(window.jQuery) || document.write('<script src="/scripts/jquery-3.1.1.min.js"><\/script>');</script>
+<script src="/resources/js/vendor/jquery.autocomplete.js" type="text/javascript"></script>
+
+<!-- moment js -->
+<script src="/resources/js/vendor/moment.min.js" type="text/javascript"></script>
+
+<!-- tweet feed -->
+<script src="/resources/js/tweetMachine-update.js" type="text/javascript"></script>
+
+<!-- prettify js -->
+<script src="/resources/js/vendor/prettify/prettify.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/prettify/lang-scala.js" type="text/javascript"></script>
+
+<!-- unslider js -->
+<script src="/resources/js/vendor/unslider.js" type="text/javascript"></script>
+
+<!-- Highlight -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/scala.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/java.min.js" type="text/javascript"></script>
+
+<!-- CodeMirror -->
+<script src="/resources/js/vendor/codemirror/codemirror.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/codemirror/clike.js" type="text/javascript"></script>
+
+<!-- TOC -->
+<script src="/resources/js/vendor/jquery.sticky.js" type="text/javascript"></script>
+<script src="/resources/js/vendor/toc.js" type="text/javascript"></script>
+
+<!-- Blog search -->
+<script src="/resources/js/vendor/jekyll.search.min.js" type="text/javascript"></script>
+
+<!-- Custom javascript -->
+<script src="/resources/js/functions.js" type="text/javascript"></script>
+
+
+
+<!-- Alogolia search for doc -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+apiKey: 'fbc439670f5d4e3730cdcb715c359391',
+indexName: 'scala-lang',
+inputSelector: '#doc-search-bar',
+algoliaOptions: { 'facetFilters': ["language:en"] },
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
+</body>
+
+</html>
