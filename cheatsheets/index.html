@@ -732,7 +732,7 @@ println(upper.getOrElse(""))</code></pre></td>
       <td>Apply a procedure on optional value</td>
     </tr>
     <tr>
-      <td><pre class="highlight"><code>option.fold(y)f(_))</code></pre>
+      <td><pre class="highlight"><code>option.fold(y)(f(_))</code></pre>
       <em><strong>same as</strong></em>
       <pre class="highlight"><code>option match {
   case Some(x) =&gt; f(x)
@@ -827,7 +827,7 @@ case None    =&gt; 0
       <td>Return value, null if empty</td>
     </tr>
     <tr>
-      <td><pre class="highlight"><code>option.filter(f(_))</code></pre>
+      <td><pre class="highlight"><code>option.filter(f)</code></pre>
       <em><strong>same as</strong></em>
       <pre class="highlight"><code>option match {
   case Some(x) if f(x) =&gt; Some(x)
