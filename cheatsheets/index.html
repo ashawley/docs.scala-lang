@@ -727,7 +727,7 @@ println(upper.getOrElse(""))</code></pre></td>
       <em><strong>same as</strong></em>
       <pre class="highlight"><code>optionOfOption match {
   case Some(Some(x)) =&gt; Some(x)
-  case None          =&gt; None
+  case _             =&gt; None
 }</code></pre></td>
       <td>Extract nested option</td>
     </tr>
@@ -736,7 +736,7 @@ println(upper.getOrElse(""))</code></pre></td>
       <em><strong>same as</strong></em>
       <pre class="highlight"><code>option match {
   case Some(x) =&gt; f(x)
-  case _       =&gt; ()
+  case None    =&gt; ()
 }</code></pre></td>
       <td>Apply a procedure on optional value</td>
     </tr>
