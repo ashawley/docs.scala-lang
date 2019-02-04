@@ -736,7 +736,7 @@ println(upper.getOrElse(""))</code></pre></td>
       <em><strong>same as</strong></em>
       <pre class="highlight"><code>option match {
   case Some(x) =&gt; f(x)
-  case None    =&gt; ()
+  case _       =&gt; ()
 }</code></pre></td>
       <td>Apply a procedure on optional value</td>
     </tr>
